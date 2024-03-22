@@ -35,7 +35,7 @@
             <!-- instructions of page end -->
 
             <!-- name input box start -->
-            <input id="nameInputBox">
+            <input id="nameInput">
 
             </input>
             <!-- name input box end -->
@@ -45,13 +45,15 @@
 
                 <!-- button for adding names start -->
                 <div class="col-3">
-                    <button></button>
+                    <button id="addNameBtn">
+                        <h1>Add Name</h1>
+                    </button>
                 </div>
                 <!-- button for adding names end -->
 
                 <!-- div to display names start -->
-                <div class="col-9" id="nameDisplayDiv">
-
+                <div class="col-9">
+                    <ul class="list-group" id="nameList"></ul>
                 </div>
                 <!-- div to display names end -->
 
@@ -63,12 +65,14 @@
 
                 <!-- button for randomly picking name start -->
                 <div class="col-3">
-                    <button></button>
+                    <button id="pickRandomBtn">
+                        <h1>Randomize</h1>
+                    </button>
                 </div>
                 <!-- button for randomly picking name end -->
 
                 <!-- div to display chosen randomized name start -->
-                <div class="col-9" id="selectedNameDiv">
+                <div class="col-9" id="randomName">
 
                 </div>
                 <!-- div to display chosen randomized name end -->
