@@ -1,42 +1,44 @@
-// create list to store names
-const nameArray = []
+//create a list to store names
+const nameArray = [];
 
 function addName() {
-    //get a trimmed version of the name from input box
-    const nameInput = document.querySelector('#nameInput');
-    const name = nameInput.value.trim();
-    nameArray.push(name);
-
-    displayNames()
-    nameInput.value = '';
+  const nameInput = document.querySelector("#nameInput");
+  const name = nameInput.value.trim();
+  nameArray.push(name);
+  displayNames()
+  nameInput.value = "";
 }
 
 function displayNames() {
-    //get ul element 
-    const nameList = document.querySelector('#nameList');
-    nameList.innerHTML = ''; //clears list
-
-    for (let i = 0; i < nameArray.length; i++){
-        //get current name from the array
-        const name = nameArray[i];
-        
-        // created an li tag in html
+    const nameList = document.querySelector("#nameList")// get UL element
+    nameList.innerHTML = '';
+    for (let i=0; i < nameArray.length; i++ ) {
+        const name = nameArray[i]
         const li = document.createElement('li');
-
-        // bootstrap class for li items
         li.className = 'list-group-item';
 
-        const span = document.createElement('span');
+        const span = document.createElement('span')
         span.textContent = name;
-
         li.appendChild(span);
 
-        nameList.appendChild(li);
+        nameList.appendChild(li)
     }
-    
-
-
 }
 
-// add onclick to add name btn
-document.querySelector('#addNameBtn').addEventListener('click', addName);
+function pickRandomName() {
+    const randomNameDiv = document.querySelector('#randomName');
+    randomNameDiv.textContent = '';
+
+    const randomNumber = Math.floor(Math.random() * nameArray.length);
+    const randomName = nameArray[randomNumber];
+
+    randomNameDiv.textContent = randomName;
+
+    nameArray.splice(randomNumber, 1);
+
+    displayNames();
+}
+
+document.querySelector("#addNameBtn").addEventListener("click", addName);
+
+document.querySelector("#pickRandomBtn").addEventListener("click", pickRandomName);
