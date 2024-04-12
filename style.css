@@ -1,0 +1,42 @@
+body {
+    background-color: #023020;
+}
+
+.border {
+    color: #FCE205;
+}
+
+ul {
+    font-size: 1.5vw;
+}
+/* fonts */
+@font-face {
+    font-family: 'matcha';
+    src: url('Matcha-EaLge.ttf');
+}
+
+.matcha {
+    font-family: 'matcha';
+}
+
+@font-face {
+    font-family: 'miology';
+    src: url('Miology.otf');
+}
+
+.miology {
+    font-family: 'miology';
+}
+
+/* colors */
+.bumblebee {
+    color: #FCE205; 
+}
+
+.darkgreen {
+    color: #023020; 
+}
+
+.bloodred {
+    color: #FF0000; 
+}
