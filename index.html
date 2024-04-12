@@ -25,12 +25,14 @@
     </head>
 
     <body>
+        <!-- title and intro -->
         <header class="my-3">
             <h1 class="display-4 text-center matcha bumblebee">🍀Lucky Me Lottery🍀</h1>
             <h4 class="text-center mb-3 matcha bumblebee">Enter all the names into the list. Then begin to select the next victim. Enjoy!</h4>
         </header>
-        
+
         <div class="container text-center">
+            <!-- input box with add name btn -->
             <div class="row mb-3 d-flex justify-content-center text-center">
               <div class="col-6">
                     <div class="input-group matcha darkgreen">
@@ -39,22 +41,23 @@
                       </div>
               </div>
             </div>
+
             <div class="row d-flex justify-content-center text-center">
+                <!-- list of names entered into here -->
                 <div class="col-lg-5 col-12 border border-3 d-100 m-2 names">
                     <h3 class="m-0 matcha">List of Names:</h3>
                     <ul id="nameList" class="matcha bumblebee"></ul>
                 </div>
+                <!-- name selected entered here -->
                 <div class="col-lg-5 col-12 border border-3 d-100 m-2 winner">
                     <h3 class="m-0 matcha">Name Selected:</h3>
                     <h2 id="randomName"></h2>
                 </div>
             </div>
+            <!-- button to select name from list randomly -->
             <button class="btn btn-outline-success btn-lg choose matcha bumblebee" type="button" id="pickRandomBtn">Select a Name</button>
         </div>
 
-        <footer>
-            <!-- place footer here -->
-        </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -70,5 +73,6 @@
 
         <!-- javascript -->
         <script src="script.js"></script>
+        
     </body>
 </html>
